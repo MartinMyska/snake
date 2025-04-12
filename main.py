@@ -37,7 +37,10 @@ while game_is_on:
         scoreboard.increase_score()
 
     # collision with wall
-    if snake.head.xcor() > scr_width / 2 - 10 or snake.head.xcor() < -(scr_width / 2 - 10) or snake.head.ycor() > scr_height / 2 - 10 or snake.head.ycor() < -(scr_height / 2 - 10):
+    if (snake.head.xcor() > scr_width / 2 - 10 or
+        snake.head.xcor() < -(scr_width / 2 - 10) or
+        snake.head.ycor() > scr_height / 2 - 10 or
+        snake.head.ycor() < -(scr_height / 2 - 10)):
         scoreboard.game_over()
         break
 
